@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AnimatedViewController.swift
 //  HW2.9-Animations
 //
 //  Created by Айдар Рахматуллин on 10.11.2020.
@@ -7,7 +7,7 @@
 
 import Spring
 
-class ViewController: UIViewController {
+class AnimatedViewController: UIViewController {
 
     
     @IBOutlet var animationView: SpringView!

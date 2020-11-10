@@ -11,7 +11,7 @@
 		E3295134255AE96100A4ADBC /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3295133255AE96100A4ADBC /* Animation.swift */; };
 		E3982F06255AB1490076831F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F05255AB1490076831F /* AppDelegate.swift */; };
 		E3982F08255AB1490076831F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F07255AB1490076831F /* SceneDelegate.swift */; };
-		E3982F0A255AB1490076831F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F09255AB1490076831F /* ViewController.swift */; };
+		E3982F0A255AB1490076831F /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F09255AB1490076831F /* AnimatedViewController.swift */; };
 		E3982F0D255AB1490076831F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3982F0B255AB1490076831F /* Main.storyboard */; };
 		E3982F0F255AB14A0076831F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3982F0E255AB14A0076831F /* Assets.xcassets */; };
 		E3982F12255AB14A0076831F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3982F10255AB14A0076831F /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		E3982F02255AB1490076831F /* HW2.9-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW2.9-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3982F05255AB1490076831F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3982F07255AB1490076831F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E3982F09255AB1490076831F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3982F09255AB1490076831F /* AnimatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
 		E3982F0C255AB1490076831F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3982F0E255AB14A0076831F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3982F11255AB14A0076831F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +52,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E329513F255B0EC200A4ADBC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E3982F0B255AB1490076831F /* Main.storyboard */,
+				E3982F10255AB14A0076831F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E3295140255B0ED900A4ADBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3295133255AE96100A4ADBC /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3295142255B0EE400A4ADBC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3982F09255AB1490076831F /* AnimatedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3295143255B0F2B00A4ADBC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E3982F05255AB1490076831F /* AppDelegate.swift */,
+				E3982F07255AB1490076831F /* SceneDelegate.swift */,
+				E3982F13255AB14A0076831F /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E3295145255B0F4300A4ADBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3982F0E255AB14A0076831F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E3982EF9255AB1490076831F = {
 			isa = PBXGroup;
 			children = (
@@ -73,14 +116,11 @@
 		E3982F04255AB1490076831F /* HW2.9-Animations */ = {
 			isa = PBXGroup;
 			children = (
-				E3982F05255AB1490076831F /* AppDelegate.swift */,
-				E3982F07255AB1490076831F /* SceneDelegate.swift */,
-				E3982F09255AB1490076831F /* ViewController.swift */,
-				E3295133255AE96100A4ADBC /* Animation.swift */,
-				E3982F0B255AB1490076831F /* Main.storyboard */,
-				E3982F0E255AB14A0076831F /* Assets.xcassets */,
-				E3982F10255AB14A0076831F /* LaunchScreen.storyboard */,
-				E3982F13255AB14A0076831F /* Info.plist */,
+				E3295140255B0ED900A4ADBC /* Models */,
+				E329513F255B0EC200A4ADBC /* Storyboards */,
+				E3295142255B0EE400A4ADBC /* ViewControllers */,
+				E3295143255B0F2B00A4ADBC /* SupportingFiles */,
+				E3295145255B0F4300A4ADBC /* Resources */,
 			);
 			path = "HW2.9-Animations";
 			sourceTree = "<group>";
@@ -208,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3982F0A255AB1490076831F /* ViewController.swift in Sources */,
+				E3982F0A255AB1490076831F /* AnimatedViewController.swift in Sources */,
 				E3982F06255AB1490076831F /* AppDelegate.swift in Sources */,
 				E3295134255AE96100A4ADBC /* Animation.swift in Sources */,
 				E3982F08255AB1490076831F /* SceneDelegate.swift in Sources */,
@@ -360,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "HW2.9-Animations/Info.plist";
+				INFOPLIST_FILE = "HW2.9-Animations/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "HW2.9-Animations/Info.plist";
+				INFOPLIST_FILE = "HW2.9-Animations/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
