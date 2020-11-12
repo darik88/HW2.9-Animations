@@ -8,7 +8,6 @@
 import Spring
 
 class AnimatedViewController: UIViewController {
-
     
     @IBOutlet var animationView: SpringView!
     @IBOutlet var actionButton: SpringButton!
@@ -22,7 +21,7 @@ class AnimatedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         animationView.layer.cornerRadius = 10
         actionButton.layer.cornerRadius = 10
         animationView.isHidden = true
@@ -31,10 +30,12 @@ class AnimatedViewController: UIViewController {
     @IBAction func actionButtonPressed(_ sender: SpringButton) {
         animationView.isHidden = false
         updateAnimationView()
+        sender.setTitle("Next animation", for: .normal)
     }
     
     private func updateAnimationView() {
         let random = Int.random(in: 0..<animations.count)
+        
         let currentAnimation = animations[random]
         
         animationView.animation = currentAnimation.preset
@@ -44,10 +45,9 @@ class AnimatedViewController: UIViewController {
 
         animationPresetLabel.text = "Preset: \(animationView.animation)"
         animationCurveLabel.text = "Curve: \(animationView.curve)"
-        animationForceLabel.text = "Force: \(animationView.force)"
-        animationDurationLabel.text = "Duration: \(animationView.duration)"
+        animationForceLabel.text = "Force: \(String(format: "%.2f",animationView.force))"
+        animationDurationLabel.text = "Duration: \(String(format: "%.2f", animationView.duration))"
         animationView.animate()
-        
     }
 }
 
