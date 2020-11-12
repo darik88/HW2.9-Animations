@@ -19,9 +19,6 @@ class AnimatedViewController: UIViewController {
     @IBOutlet var animationDurationLabel: UILabel!
     
     let animations = Animation.getAnimations()
-    var currentAnimation: Animation {
-        animations[0]
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
