@@ -12,12 +12,9 @@ class AnimatedViewController: UIViewController {
     @IBOutlet var animationView: SpringView!
     @IBOutlet var actionButton: SpringButton!
     
-    @IBOutlet var animationPresetLabel: UILabel!
-    @IBOutlet var animationCurveLabel: UILabel!
-    @IBOutlet var animationForceLabel: UILabel!
-    @IBOutlet var animationDurationLabel: UILabel!
+    @IBOutlet var animationLabel: UILabel!
     
-    let animations = Animation.getAnimations()
+    var animation = Animation.getRandomAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +27,19 @@ class AnimatedViewController: UIViewController {
     @IBAction func actionButtonPressed(_ sender: SpringButton) {
         animationView.isHidden = false
         updateAnimationView()
-        sender.setTitle("Next animation", for: .normal)
+        sender.setTitle("Try \(animation.preset)", for: .normal)
     }
     
     private func updateAnimationView() {
-        let random = Int.random(in: 0..<animations.count)
+        animationView.animation = animation.preset
+        animationView.curve = animation.curve
+        animationView.duration = CGFloat(animation.duration)
+        animationView.force = CGFloat(animation.force)
         
-        let currentAnimation = animations[random]
-        
-        animationView.animation = currentAnimation.preset
-        animationView.curve = currentAnimation.curve
-        animationView.duration = CGFloat(currentAnimation.duration)
-        animationView.force = CGFloat(currentAnimation.force)
-
-        animationPresetLabel.text = "Preset: \(animationView.animation)"
-        animationCurveLabel.text = "Curve: \(animationView.curve)"
-        animationForceLabel.text = "Force: \(String(format: "%.2f",animationView.force))"
-        animationDurationLabel.text = "Duration: \(String(format: "%.2f", animationView.duration))"
+        animationLabel.text = animation.description
         animationView.animate()
+        
+        animation = Animation.getRandomAnimation()
     }
 }
 
