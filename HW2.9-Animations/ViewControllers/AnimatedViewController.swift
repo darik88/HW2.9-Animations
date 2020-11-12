@@ -19,9 +19,13 @@ class AnimatedViewController: UIViewController {
     @IBOutlet var animationDurationLabel: UILabel!
     
     let animations = Animation.getAnimations()
+    var currentAnimation: Animation {
+        animations[0]
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         animationView.layer.cornerRadius = 10
         actionButton.layer.cornerRadius = 10
         animationView.isHidden = true
@@ -33,10 +37,9 @@ class AnimatedViewController: UIViewController {
     }
     
     private func updateAnimationView() {
-        
         let random = Int.random(in: 0..<animations.count)
         let currentAnimation = animations[random]
-                
+        
         animationView.animation = currentAnimation.preset
         animationView.curve = currentAnimation.curve
         animationView.duration = CGFloat(currentAnimation.duration)
@@ -46,8 +49,8 @@ class AnimatedViewController: UIViewController {
         animationCurveLabel.text = "Curve: \(animationView.curve)"
         animationForceLabel.text = "Force: \(animationView.force)"
         animationDurationLabel.text = "Duration: \(animationView.duration)"
-
         animationView.animate()
+        
     }
 }
 

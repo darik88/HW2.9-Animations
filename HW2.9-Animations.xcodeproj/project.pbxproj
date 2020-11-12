@@ -67,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				E3295133255AE96100A4ADBC /* Animation.swift */,
-				E37BEFCE255D2903008BE6CA /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,6 +82,7 @@
 		E3295143255B0F2B00A4ADBC /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E37BEFCE255D2903008BE6CA /* DataManager.swift */,
 				E3982F05255AB1490076831F /* AppDelegate.swift */,
 				E3982F07255AB1490076831F /* SceneDelegate.swift */,
 				E3982F13255AB14A0076831F /* Info.plist */,
