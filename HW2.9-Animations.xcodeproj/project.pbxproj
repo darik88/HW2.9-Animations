@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73FBD6192B8A19D7512B884C /* Pods_HW2_9_Animations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8C69CE26B7D4D40E515E34 /* Pods_HW2_9_Animations.framework */; };
 		E3295134255AE96100A4ADBC /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3295133255AE96100A4ADBC /* Animation.swift */; };
+		E37BEFCF255D2903008BE6CA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37BEFCE255D2903008BE6CA /* DataManager.swift */; };
 		E3982F06255AB1490076831F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F05255AB1490076831F /* AppDelegate.swift */; };
 		E3982F08255AB1490076831F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F07255AB1490076831F /* SceneDelegate.swift */; };
 		E3982F0A255AB1490076831F /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3982F09255AB1490076831F /* AnimatedViewController.swift */; };
@@ -22,6 +23,7 @@
 		678369C126A500637B761D2C /* Pods-HW2.9-Animations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW2.9-Animations.debug.xcconfig"; path = "Target Support Files/Pods-HW2.9-Animations/Pods-HW2.9-Animations.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC68CC14AE1FC5C918892ED /* Pods-HW2.9-Animations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW2.9-Animations.release.xcconfig"; path = "Target Support Files/Pods-HW2.9-Animations/Pods-HW2.9-Animations.release.xcconfig"; sourceTree = "<group>"; };
 		E3295133255AE96100A4ADBC /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		E37BEFCE255D2903008BE6CA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E3982F02255AB1490076831F /* HW2.9-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW2.9-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3982F05255AB1490076831F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3982F07255AB1490076831F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E3295133255AE96100A4ADBC /* Animation.swift */,
+				E37BEFCE255D2903008BE6CA /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3982F0A255AB1490076831F /* AnimatedViewController.swift in Sources */,
+				E37BEFCF255D2903008BE6CA /* DataManager.swift in Sources */,
 				E3982F06255AB1490076831F /* AppDelegate.swift in Sources */,
 				E3295134255AE96100A4ADBC /* Animation.swift in Sources */,
 				E3982F08255AB1490076831F /* SceneDelegate.swift in Sources */,

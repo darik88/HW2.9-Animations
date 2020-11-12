@@ -12,10 +12,13 @@ class AnimatedViewController: UIViewController {
     
     @IBOutlet var animationView: SpringView!
     @IBOutlet var actionButton: SpringButton!
+    
     @IBOutlet var animationPresetLabel: UILabel!
     @IBOutlet var animationCurveLabel: UILabel!
     @IBOutlet var animationForceLabel: UILabel!
     @IBOutlet var animationDurationLabel: UILabel!
+    
+    let animations = Animation.getAnimations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,37 +33,21 @@ class AnimatedViewController: UIViewController {
     }
     
     private func updateAnimationView() {
-        let animation = Animation(
-            preset: getRandomAnimationPreset(),
-            curve: getRandomAnimationCurve(),
-            duration: Float.random(in: 0.5...3),
-            force: Float.random(in: 0.5...3))
         
-        animationView.animation = animation.preset
-        animationView.curve = animation.curve
-        animationView.duration = CGFloat(animation.duration)
-        animationView.force = CGFloat(animation.force)
-        
-        animationPresetLabel.text = "Preset: \(animation.preset)"
-        animationCurveLabel.text = "Curve: \(animation.curve)"
-        animationForceLabel.text = "Force: \(animation.force)"
-        animationDurationLabel.text = "Duration: \(animation.duration)"
-        
+        let random = Int.random(in: 0..<animations.count)
+        let currentAnimation = animations[random]
+                
+        animationView.animation = currentAnimation.preset
+        animationView.curve = currentAnimation.curve
+        animationView.duration = CGFloat(currentAnimation.duration)
+        animationView.force = CGFloat(currentAnimation.force)
+
+        animationPresetLabel.text = "Preset: \(animationView.animation)"
+        animationCurveLabel.text = "Curve: \(animationView.curve)"
+        animationForceLabel.text = "Force: \(animationView.force)"
+        animationDurationLabel.text = "Duration: \(animationView.duration)"
+
         animationView.animate()
-    }
-    
-    private func getRandomAnimationPreset() -> String {
-        // enum AnimationPreset подписал под протокол CaseIterable
-        let animationPresets = Spring.AnimationPreset.allCases
-        let random = Int.random(in: 0..<animationPresets.count)
-        return animationPresets[random].rawValue
-    }
-    
-    private func getRandomAnimationCurve() -> String {
-        // enum AnimationCurve подписал под протокол CaseIterable
-        let animationCurves = Spring.AnimationCurve.allCases
-        let random = Int.random(in: 0..<animationCurves.count)
-        return animationCurves[random].rawValue
     }
 }
 
